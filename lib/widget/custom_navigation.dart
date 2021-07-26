@@ -13,9 +13,9 @@ class CustomNavigations extends StatelessWidget {
         currentIndex: indexPosition,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.access_alarm_outlined), label: 'Menu 1'),
+              icon: Icon(Icons.request_page), label: 'Menu 1'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.accessibility_new), label: 'Menu 2'),
+              icon: Icon(Icons.star_outline), label: 'Menu 2'),
           BottomNavigationBarItem(
               icon: Icon(Icons.accessibility_new), label: 'Menu 3'),
           BottomNavigationBarItem(

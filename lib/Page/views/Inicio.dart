@@ -11,8 +11,8 @@ class Inicio extends StatelessWidget {
           height: double.infinity,
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: <Color>[
-            const Color(0xFF1357B9),
-            const Color(4279484091),
+            const Color(4280887593),
+            const Color(4279505940),
           ], begin: Alignment.topCenter)),
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 200),

@@ -7,6 +7,7 @@ import 'package:proyecto_final/widget/custom_navigation.dart';
 
 import 'views/FormularioPage.dart';
 import 'views/Inicio.dart';
+import 'views/Lector_Qr.dart';
 
 class HomeTab extends StatelessWidget {
   @override
@@ -32,9 +33,9 @@ class HomeTabContainer extends StatelessWidget {
 
     switch (indexPosition) {
       case 0:
-        return Inicio();
-      case 1:
         return FormularioPage();
+      case 1:
+        return Inicio();
       default:
         return Inicio();
     }

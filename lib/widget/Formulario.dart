@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:proyecto_final/Page/views/Lector_Qr.dart';
 import 'package:proyecto_final/widget/inputText.dart';
 
 class Registro extends StatefulWidget {
@@ -13,10 +15,12 @@ class RegistroState extends State<Registro> {
   String _nombre = "";
   String _categoria = "";
   String _id = "";
+  TextEditingController controllerName = TextEditingController(text: "");
+  TextEditingController controllerCategory = TextEditingController(text: "");
+  TextEditingController controllerId = TextEditingController(text: "");
+
   _submit() {
-    this._nombre = _nombre;
-    this._categoria = _categoria;
-    this._id = _id;
+    return _nombre + "\n" + _categoria + "\n" + _id;
   }
 
   @override
@@ -27,6 +31,7 @@ class RegistroState extends State<Registro> {
       child: Column(
         children: <Widget>[
           InputText(
+            controller: controllerName,
             label: 'Nombre',
             hint: 'Nombre',
             icon: Icon(Icons.verified_user),
@@ -40,6 +45,7 @@ class RegistroState extends State<Registro> {
             height: 15.0,
           ),
           InputText(
+            controller: controllerCategory,
             label: 'Categoria',
             hint: 'Categoria de riesgo: bajo, alto, mundial',
             icon: Icon(Icons.category),
@@ -53,6 +59,7 @@ class RegistroState extends State<Registro> {
             height: 15.0,
           ),
           InputText(
+            controller: controllerId,
             label: 'ID',
             hint: 'ID',
             icon: Icon(Icons.perm_identity),
@@ -68,8 +75,19 @@ class RegistroState extends State<Registro> {
           SizedBox(
             width: double.infinity,
             child: FlatButton(
-              color: Colors.pink,
-              onPressed: this._submit,
+              color: Color(0xFF49A005),
+              onPressed: () {
+                print(controllerName.text);
+                print(controllerCategory.text);
+                print(controllerId.text);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Page1(
+                            name: controllerName.text,
+                            categoria: controllerCategory.text,
+                            id: controllerId.text)));
+              },
               child: Text(
                 'Registrar criatura SCP',
                 style: TextStyle(
@@ -84,9 +102,8 @@ class RegistroState extends State<Registro> {
     );
   }
 
-  get String Nombre(){
-    return _nombre;
-  }
+  // ignore: non_constant_identifier_names
+
 }
 
 //   body() {

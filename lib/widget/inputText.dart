@@ -6,6 +6,7 @@ class InputText extends StatelessWidget {
   final Icon icon;
   final TextInputType keyboard;
   final bool obscure;
+  final TextEditingController controller;
   final void Function(String data) onChanged;
 
   const InputText({
@@ -15,6 +16,7 @@ class InputText extends StatelessWidget {
     required this.icon,
     required this.keyboard,
     required this.obscure,
+    required this.controller,
     required this.onChanged,
   }) : super(key: key);
 
@@ -22,6 +24,7 @@ class InputText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: TextFormField(
+        controller: this.controller,
         keyboardType: this.keyboard,
         obscureText: this.obscure,
         onChanged: this.onChanged,
