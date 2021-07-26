@@ -16,10 +16,10 @@ class CustomNavigations extends StatelessWidget {
               icon: Icon(Icons.request_page), label: 'Menu 1'),
           BottomNavigationBarItem(
               icon: Icon(Icons.star_outline), label: 'Menu 2'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.accessibility_new), label: 'Menu 3'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.accessibility_new), label: 'Menu 4'),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.accessibility_new), label: 'Menu 3'),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.accessibility_new), label: 'Menu 4'),
         ]);
   }
 }
